@@ -1,0 +1,19 @@
+{
+  "id": "suite-pr",
+  "name": "PR",
+  "description": "Tests to run on every pull request.",
+  "intentIds": [],
+  "tags": [
+    "preset",
+    "pr"
+  ],
+  "isPreset": true,
+  "runMode": "fail-fast",
+  "metadata": {
+    "createdAt": "2026-07-02T08:19:52.253909+00:00",
+    "updatedAt": "2026-07-02T14:16:49.645213+00:00",
+    "lastRun": null,
+    "runCount": 0,
+    "passCount": 0
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "id": "test-9a42314f",
+  "name": "Create A Concept",
+  "description": "Verifies that a user can navigate to Form Management > Concepts and successfully create a new concept with a name and unit.",
+  "baseUrl": "https://dev-prism.upcover.com",
+  "createdFrom": "recorder",
+  "tags": [
+    "form-management",
+    "concepts",
+    "create",
+    "admin"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Click the 'Settings' link in the navigation",
+      "type": "click",
+      "target": {
+        "text": "Settings",
+        "role": "link",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Click on 'Form Management' card to navigate to the form management section",
+      "type": "click",
+      "target": {
+        "text": "Form Management",
+        "role": "heading",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Click on 'Concepts' card to navigate to the concepts list",
+      "type": "click",
+      "target": {
+        "text": "Concepts",
+        "role": "heading",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Click the button to open the Create Concept dialog/form",
+      "type": "click",
+      "target": {
+        "text": "New Concept",
+        "role": "button",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-5",
+      "order": 5,
+      "intent": "Type the concept name 'Automated Concept' in the concept name input field",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": null,
+        "testId": null,
+        "css": "#concept-name",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Automated Concept",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-6",
+      "order": 6,
+      "intent": "Type the concept unit 'AUD' in the concept unit input field",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": null,
+        "testId": null,
+        "css": "#concept-unit",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "AUD",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-7",
+      "order": 7,
+      "intent": "Click the 'Create concept' submit button to create the new concept",
+      "type": "click",
+      "target": {
+        "text": "Create concept",
+        "role": "button",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-1",
+      "intent": "Verify navigation to the admin settings page",
+      "type": "url",
+      "expected": "/admin",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-2",
+      "intent": "Verify navigation to the Form Management page",
+      "type": "url",
+      "expected": "/admin/form-management",
+      "tolerance": null
+    },
+    {
+      "id": "assert-3",
+      "afterStep": "step-3",
+      "intent": "Verify navigation to the Concepts list page",
+      "type": "url",
+      "expected": "/admin/form-management/concepts",
+      "tolerance": null
+    },
+    {
+      "id": "assert-4",
+      "afterStep": "step-4",
+      "intent": "Verify the Create Concept dialog/form is open and the concept name input is visible",
+      "type": "visible",
+      "expected": "#concept-name",
+      "tolerance": null
+    },
+    {
+      "id": "assert-5",
+      "afterStep": "step-7",
+      "intent": "Verify the user remains on the Concepts page after successfully creating the concept",
+      "type": "url",
+      "expected": "/admin/form-management/concepts",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-07-01T19:52:34.437126+00:00",
+    "updatedAt": "2026-07-28T07:49:26.486102+00:00",
+    "lastRun": "2026-07-28T07:49:26.485674+00:00",
+    "runCount": 18,
+    "passCount": 9,
+    "passRate": 0.5,
+    "avgDuration": 11996,
+    "source": null
+  }
+}

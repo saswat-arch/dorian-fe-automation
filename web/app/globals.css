@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: 40 20% 99%;
+  --foreground: 220 20% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 20% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 20% 10%;
+  --primary: 220 15% 15%;
+  --primary-foreground: 40 20% 98%;
+  --secondary: 40 10% 95%;
+  --secondary-foreground: 220 15% 15%;
+  --muted: 40 10% 95%;
+  --muted-foreground: 220 8% 50%;
+  --accent: 40 10% 95%;
+  --accent-foreground: 220 15% 15%;
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 40 8% 90%;
+  --input: 40 8% 90%;
+  --ring: 220 15% 15%;
+  --radius: 0.625rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+::selection {
+  background-color: hsl(220 15% 15% / 0.08);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 8% 80%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220 8% 65%);
+}

@@ -1,0 +1,175 @@
+{
+  "id": "test-b4aa900a",
+  "name": "Create Business Profile and Navigate to Documents Tab",
+  "description": "Test creates a new business profile with contact information and verifies navigation through the profile tabs to the documents section",
+  "baseUrl": "https://staging-prism.upcover.com/",
+  "createdFrom": "recorder",
+  "tags": [
+    "business-profile",
+    "form-submission",
+    "navigation",
+    "documents"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Click on Add Business Profile button",
+      "type": "click",
+      "target": {
+        "text": "Add Business Profile",
+        "role": "generic",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Enter business name",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": null,
+        "testId": null,
+        "css": "#business-name",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Automted Profile",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Enter contact full name",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": null,
+        "testId": null,
+        "css": "#contact-full-name-0",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Saswat Automated",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Enter contact email address",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": null,
+        "testId": null,
+        "css": "#contact-email-0",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "marpureddy+auto@upcover.com",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-5",
+      "order": 5,
+      "intent": "Submit the create profile form",
+      "type": "click",
+      "target": {
+        "text": "Create Profile",
+        "role": "button",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-6",
+      "order": 6,
+      "intent": "Click on the business profile heading",
+      "type": "click",
+      "target": {
+        "text": "Automted Profile",
+        "role": "heading",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-5",
+      "intent": "Verify navigation to business profile documents tab",
+      "type": "url",
+      "expected": "/business-profile",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-6",
+      "intent": "Verify business profile heading is visible with correct name",
+      "type": "visible",
+      "expected": "Automted Profile",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-04-28T06:13:28.446418+00:00",
+    "updatedAt": "2026-05-21T06:26:32.695560+00:00",
+    "lastRun": "2026-05-21T06:26:32.695043+00:00",
+    "runCount": 4,
+    "passCount": 2,
+    "passRate": 0.5,
+    "avgDuration": 38365,
+    "source": null
+  }
+}

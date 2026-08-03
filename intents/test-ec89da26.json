@@ -1,0 +1,149 @@
+{
+  "id": "test-ec89da26",
+  "name": "Business Contacts",
+  "description": "Verifies that a user can navigate from the admin area through the Settings link, then to the Contacts section, and finally into Business Contacts.",
+  "baseUrl": "https://dev-prism.upcover.com",
+  "createdFrom": "recorder",
+  "tags": [
+    "navigation",
+    "admin",
+    "contacts",
+    "business-contacts"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Navigate to the admin area as the starting point",
+      "type": "navigate",
+      "target": null,
+      "value": null,
+      "url": "/admin",
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Click the Settings link in the navigation",
+      "type": "click",
+      "target": {
+        "text": "Settings",
+        "role": "link",
+        "testId": null,
+        "css": "a:has-text('Settings')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Click on the Contacts card or link to navigate to the Contacts section",
+      "type": "click",
+      "target": {
+        "text": "Business Contacts",
+        "role": "link",
+        "testId": null,
+        "css": "a:has-text('Business Contacts')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Click the Business Contacts card to navigate to the business contacts management page",
+      "type": "click",
+      "target": {
+        "text": "Business Contacts",
+        "role": "link",
+        "testId": null,
+        "css": "a.group:has-text('Business Contacts')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-1",
+      "intent": "Confirm the admin page is loaded",
+      "type": "url",
+      "expected": "/admin",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-2",
+      "intent": "Confirm navigation to the admin area after clicking Settings",
+      "type": "url",
+      "expected": "/admin",
+      "tolerance": null
+    },
+    {
+      "id": "assert-3",
+      "afterStep": "step-3",
+      "intent": "Confirm navigation to the Contacts section",
+      "type": "url",
+      "expected": "/admin/contacts",
+      "tolerance": null
+    },
+    {
+      "id": "assert-4",
+      "afterStep": "step-4",
+      "intent": "Confirm navigation to the Business Contacts page",
+      "type": "url",
+      "expected": "/admin/contacts/business-contacts",
+      "tolerance": null
+    },
+    {
+      "id": "assert-5",
+      "afterStep": "step-4",
+      "intent": "Confirm the Business Contacts page content is visible",
+      "type": "visible",
+      "expected": "Business Contacts",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-07-27T19:33:47.927096+00:00",
+    "updatedAt": "2026-07-27T19:33:47.927096+00:00",
+    "lastRun": null,
+    "runCount": 0,
+    "passCount": 0,
+    "passRate": 0,
+    "avgDuration": 0,
+    "source": null
+  }
+}

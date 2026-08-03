@@ -1,0 +1,22 @@
+{
+  "id": "suite-regression",
+  "name": "Regression",
+  "description": "Full regression pass over historical bug scenarios.",
+  "intentIds": [
+    "test-9a42314f",
+    "test-6e3a0a88"
+  ],
+  "tags": [
+    "preset",
+    "regression"
+  ],
+  "isPreset": true,
+  "runMode": "fail-fast",
+  "metadata": {
+    "createdAt": "2026-07-02T08:19:52.253744+00:00",
+    "updatedAt": "2026-07-02T20:48:47.122746+00:00",
+    "lastRun": "2026-07-02T21:13:50.726304+00:00",
+    "runCount": 4,
+    "passCount": 1
+  }
+}

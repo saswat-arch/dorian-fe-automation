@@ -1,0 +1,306 @@
+{
+  "id": "test-0b844e86",
+  "name": "Create a question",
+  "description": "Verifies that a user can navigate from the Admin Dashboard to Form Management > Questions, then create a new question named \"Automated Question\" with \"Automated Concept\" and \"Text Input\" widget type.",
+  "baseUrl": "https://dev-prism.upcover.com",
+  "createdFrom": "recorder",
+  "tags": [
+    "form-management",
+    "questions",
+    "content-creation",
+    "data-entry",
+    "navigation"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Navigate to the Admin Dashboard",
+      "type": "navigate",
+      "target": null,
+      "value": null,
+      "url": "/admin",
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Click on the 'Form Management' card to navigate to the Form Management page",
+      "type": "click",
+      "target": {
+        "text": "Form Management",
+        "role": "heading",
+        "testId": null,
+        "css": "h2:has-text('Form Management')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Click on the 'Questions' card to navigate to the Form Questions page",
+      "type": "click",
+      "target": {
+        "text": "Questions",
+        "role": "heading",
+        "testId": null,
+        "css": "h2:has-text('Questions')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Click the 'New Question' button to open the create question form panel",
+      "type": "click",
+      "target": {
+        "text": "New Question",
+        "role": "button",
+        "testId": null,
+        "css": "button:has-text('New Question'), span:has-text('New Question')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-5",
+      "order": 5,
+      "intent": "Type 'Automated Question' into the Name input field",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": "textbox",
+        "testId": null,
+        "css": "#question-name",
+        "xpath": null,
+        "label": "Name",
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Automated Question",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-6",
+      "order": 6,
+      "intent": "Open the Concept dropdown to search for a concept",
+      "type": "click",
+      "target": {
+        "text": null,
+        "role": null,
+        "testId": null,
+        "css": "span.block.min-w-0.truncate[data-state]",
+        "xpath": null,
+        "label": "Concept",
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-7",
+      "order": 7,
+      "intent": "Type 'Autom' into the concept search field to filter concepts",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": "textbox",
+        "testId": null,
+        "css": "#search-concepts",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Autom",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-8",
+      "order": 8,
+      "intent": "Select 'Automated Concept' from the concept dropdown list",
+      "type": "click",
+      "target": {
+        "text": "Automated Concept",
+        "role": "button",
+        "testId": null,
+        "css": "button:has-text('Automated Concept')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-9",
+      "order": 9,
+      "intent": "Open the Widget type dropdown",
+      "type": "click",
+      "target": {
+        "text": "Checkbox Group Single",
+        "role": null,
+        "testId": null,
+        "css": "span.block.min-w-0.truncate:has-text('Checkbox Group Single')",
+        "xpath": null,
+        "label": "Widget",
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-10",
+      "order": 10,
+      "intent": "Select 'Text Input' from the widget type options",
+      "type": "click",
+      "target": {
+        "text": "Text Input",
+        "role": null,
+        "testId": null,
+        "css": "span:has-text('Text Input')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-11",
+      "order": 11,
+      "intent": "Click 'Create question' button to submit the form and create the new question",
+      "type": "click",
+      "target": {
+        "text": "Create question",
+        "role": "button",
+        "testId": null,
+        "css": "button:has-text('Create question'), span:has-text('Create question')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-2",
+      "intent": "Verify navigation to the Form Management page",
+      "type": "url",
+      "expected": "/admin/form-management",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-3",
+      "intent": "Verify navigation to the Form Questions page",
+      "type": "url",
+      "expected": "/admin/form-management/questions",
+      "tolerance": null
+    },
+    {
+      "id": "assert-3",
+      "afterStep": "step-4",
+      "intent": "Verify the create question form panel is visible after clicking New Question",
+      "type": "visible",
+      "expected": "#question-name",
+      "tolerance": null
+    },
+    {
+      "id": "assert-4",
+      "afterStep": "step-8",
+      "intent": "Verify 'Automated Concept' is selected and shown in the concept field",
+      "type": "visible",
+      "expected": "Automated Concept",
+      "tolerance": null
+    },
+    {
+      "id": "assert-5",
+      "afterStep": "step-10",
+      "intent": "Verify 'Text Input' is selected and shown in the widget field",
+      "type": "visible",
+      "expected": "Text Input",
+      "tolerance": null
+    },
+    {
+      "id": "assert-6",
+      "afterStep": "step-11",
+      "intent": "Verify the user is returned to the Form Questions page after successful creation",
+      "type": "url",
+      "expected": "/admin/form-management/questions",
+      "tolerance": null
+    },
+    {
+      "id": "assert-7",
+      "afterStep": "step-11",
+      "intent": "Verify the success confirmation message 'Question created successfully' appears",
+      "type": "visible",
+      "expected": "Question created successfully",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-07-28T06:04:38.726630+00:00",
+    "updatedAt": "2026-07-28T06:05:50.934843+00:00",
+    "lastRun": "2026-07-28T06:05:50.934651+00:00",
+    "runCount": 2,
+    "passCount": 0,
+    "passRate": 0.0,
+    "avgDuration": 5631,
+    "source": null
+  }
+}

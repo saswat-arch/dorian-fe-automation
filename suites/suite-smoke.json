@@ -1,0 +1,21 @@
+{
+  "id": "suite-smoke",
+  "name": "Smoke",
+  "description": "Critical-path tests to run on every deploy.",
+  "intentIds": [
+    "test-6e3a0a88"
+  ],
+  "tags": [
+    "preset",
+    "smoke"
+  ],
+  "isPreset": true,
+  "runMode": "fail-fast",
+  "metadata": {
+    "createdAt": "2026-07-02T08:19:52.253139+00:00",
+    "updatedAt": "2026-07-02T09:00:13.704892+00:00",
+    "lastRun": null,
+    "runCount": 0,
+    "passCount": 0
+  }
+}

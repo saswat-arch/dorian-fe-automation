@@ -1,0 +1,216 @@
+{
+  "id": "test-d374a5d8",
+  "name": "Duplicate Concept should not be allowed",
+  "description": "Verifies that navigating to Form Management > Concepts and attempting to create a new concept with a duplicate name ('Automated Concept') displays the appropriate error message.",
+  "baseUrl": "https://dev-prism.upcover.com",
+  "createdFrom": "recorder",
+  "tags": [
+    "form-management",
+    "concepts",
+    "error-handling",
+    "duplicate-validation",
+    "admin"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Click the 'Settings' tab in the header navigation to go to the Admin Dashboard",
+      "type": "click",
+      "target": {
+        "text": "Settings",
+        "role": "link",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Click the 'Form Management' card on the Admin Dashboard",
+      "type": "click",
+      "target": {
+        "text": "Form Management",
+        "role": null,
+        "testId": null,
+        "css": "[data-slot='card']:has-text('Form Management')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Click the 'Concepts' navigation item in the Form Management sidebar",
+      "type": "click",
+      "target": {
+        "text": "Concepts",
+        "role": "heading",
+        "testId": null,
+        "css": "h2:has-text('Concepts')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Click the 'New Concept' button to open the create concept form",
+      "type": "click",
+      "target": {
+        "text": "New Concept",
+        "role": "button",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-5",
+      "order": 5,
+      "intent": "Type 'Automated Concept' into the Name input field",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": "textbox",
+        "testId": null,
+        "css": "#concept-name",
+        "xpath": null,
+        "label": "Name",
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Automated Concept",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-6",
+      "order": 6,
+      "intent": "Click the 'Create concept' submit button",
+      "type": "click",
+      "target": {
+        "text": "Create concept",
+        "role": "button",
+        "testId": null,
+        "css": "[role='dialog'] button:has-text('Create concept')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-1",
+      "intent": "Verify navigation to the Admin Dashboard after clicking Settings",
+      "type": "url",
+      "expected": "/admin",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-2",
+      "intent": "Verify navigation to the Form Management page",
+      "type": "url",
+      "expected": "/admin/form-management",
+      "tolerance": null
+    },
+    {
+      "id": "assert-3",
+      "afterStep": "step-3",
+      "intent": "Verify navigation to the Form Concepts page",
+      "type": "url",
+      "expected": "/admin/form-management/concepts",
+      "tolerance": null
+    },
+    {
+      "id": "assert-4",
+      "afterStep": "step-4",
+      "intent": "Verify the create concept form/modal is open and the Name input is visible",
+      "type": "visible",
+      "expected": "#concept-name",
+      "tolerance": null
+    },
+    {
+      "id": "assert-5",
+      "afterStep": "step-5",
+      "intent": "Verify 'Automated Concept' has been typed into the Name field",
+      "type": "text",
+      "expected": "Automated Concept",
+      "tolerance": null
+    },
+    {
+      "id": "assert-6",
+      "afterStep": "step-6",
+      "intent": "Verify the duplicate concept error message is displayed after submit",
+      "type": "visible",
+      "expected": ".text-destructive",
+      "tolerance": null
+    },
+    {
+      "id": "assert-7",
+      "afterStep": "step-6",
+      "intent": "Verify the error message references the duplicate concept name 'Automated Concept'",
+      "type": "text",
+      "expected": "Automated Concept",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-07-28T07:53:26.399587+00:00",
+    "updatedAt": "2026-07-28T07:54:14.677792+00:00",
+    "lastRun": "2026-07-28T07:54:14.677442+00:00",
+    "runCount": 1,
+    "passCount": 0,
+    "passRate": 0.0,
+    "avgDuration": 27350,
+    "source": null
+  }
+}

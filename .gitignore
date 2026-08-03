@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Python
+engine/.venv/
+engine/logs/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Reports and screenshots
+reports/
+
+# Knowledgebase SQLite files
+knowledgebase/*.db
+knowledgebase/*.db-journal
+knowledgebase/*.db-wal
+
+# Intent cache files
+intents/.cache/
+
+# Auth state
+.auth/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+
+# Next.js
+web/.next/
+web/out/
+
+# pnpm
+.pnpm-debug.log
+.cursor

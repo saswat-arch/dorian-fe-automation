@@ -1,0 +1,415 @@
+{
+  "id": "test-6e3a0a88",
+  "name": "Search, Edit, and Delete Automated Concept in Form Management",
+  "description": "Verifies that a user can navigate to Form Management Concepts, search for and view a concept, edit its data type, and then delete it with confirmation.",
+  "baseUrl": "https://dev-prism.upcover.com",
+  "createdFrom": "recorder",
+  "tags": [
+    "form-management",
+    "concepts",
+    "search",
+    "edit",
+    "delete",
+    "admin",
+    "data-type",
+    "confirmation-modal"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Navigate to the Admin Dashboard by clicking Settings in the top navigation bar",
+      "type": "navigate",
+      "target": {
+        "text": "Settings",
+        "role": "link",
+        "testId": null,
+        "css": null,
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": "/admin",
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Click the Form Management card on the Admin Dashboard",
+      "type": "click",
+      "target": {
+        "text": "Form Management",
+        "role": "link",
+        "testId": null,
+        "css": "a:has-text('Form Management')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Click the Concepts card on the Form Management page",
+      "type": "click",
+      "target": {
+        "text": "Concepts",
+        "role": "link",
+        "testId": null,
+        "css": "a:has-text('Concepts')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Type 'Auto' into the search concepts input to filter the list",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": "searchbox",
+        "testId": null,
+        "css": "input[type='search']",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Auto",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-5",
+      "order": 5,
+      "intent": "Click the View button for 'Automated Concept' in the filtered concept list",
+      "type": "click",
+      "target": {
+        "text": "View",
+        "role": "button",
+        "testId": null,
+        "css": "tr:has-text('Automated Concept') button:has-text('View'), [data-row]:has-text('Automated Concept') button:has-text('View')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-close-view",
+      "order": 6,
+      "intent": "Close the View side panel so subsequent row actions are clickable",
+      "type": "click",
+      "target": {
+        "text": "Close",
+        "role": "button",
+        "testId": null,
+        "css": "[role='dialog'][data-state='open'] button:has-text('Close')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-6",
+      "order": 7,
+      "intent": "Click the Edit button for 'Automated Concept' in the side panel",
+      "type": "click",
+      "target": {
+        "text": "Edit",
+        "role": "button",
+        "testId": null,
+        "css": "tr:has-text('Automated Concept') button:has-text('Edit'), [data-row]:has-text('Automated Concept') button:has-text('Edit')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-7",
+      "order": 8,
+      "intent": "Click the Data type dropdown in the Edit Concept form to open it",
+      "type": "click",
+      "target": {
+        "text": "String",
+        "role": "combobox",
+        "testId": null,
+        "css": "[role='dialog'] [role='combobox'], [data-state='open'] [role='combobox']",
+        "xpath": null,
+        "label": "Data type",
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-8",
+      "order": 9,
+      "intent": "Select 'Number' from the Data type dropdown options",
+      "type": "click",
+      "target": {
+        "text": "Number",
+        "role": "option",
+        "testId": null,
+        "css": "[role='listbox'] [role='option']:has-text('Number'), [role='menu'] [role='menuitem']:has-text('Number')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-9",
+      "order": 10,
+      "intent": "Click the Save changes button to submit the updated concept data type",
+      "type": "click",
+      "target": {
+        "text": "Save changes",
+        "role": "button",
+        "testId": null,
+        "css": "[role='dialog'][data-state='open'] button:has-text('Save changes')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-10",
+      "order": 11,
+      "intent": "Click the Delete button for 'Automated Concept' to initiate deletion",
+      "type": "click",
+      "target": {
+        "text": "Delete",
+        "role": "button",
+        "testId": null,
+        "css": "tr:has-text('Automated Concept') button:has-text('Delete'), [data-row]:has-text('Automated Concept') button:has-text('Delete')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-11",
+      "order": 12,
+      "intent": "Type 'Automated Concept' into the confirmation input field in the delete modal",
+      "type": "type",
+      "target": {
+        "text": null,
+        "role": "textbox",
+        "testId": null,
+        "css": "[role='dialog'] input[type='text'], [role='dialog'] input:not([type='search'])",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": "Automated Concept",
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-12",
+      "order": 13,
+      "intent": "Click the Delete button in the confirmation modal to confirm deletion of 'Automated Concept'",
+      "type": "click",
+      "target": {
+        "text": "Delete",
+        "role": "button",
+        "testId": null,
+        "css": "[role='dialog'] button[data-slot='button']:has-text('Delete')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-1",
+      "intent": "Verify navigation to the Admin Dashboard after clicking Settings",
+      "type": "url",
+      "expected": "/admin",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-3",
+      "intent": "Verify navigation to the Form Concepts page",
+      "type": "url",
+      "expected": "/admin/form-management/concepts",
+      "tolerance": null
+    },
+    {
+      "id": "assert-3",
+      "afterStep": "step-3",
+      "intent": "Verify the search input is visible on the Form Concepts page",
+      "type": "visible",
+      "expected": "input[type='search']",
+      "tolerance": null
+    },
+    {
+      "id": "assert-4",
+      "afterStep": "step-4",
+      "intent": "Verify the concept list filtered to show 'Automated Concept' after searching 'Auto'",
+      "type": "visible",
+      "expected": "Automated Concept",
+      "tolerance": null
+    },
+    {
+      "id": "assert-5",
+      "afterStep": "step-5",
+      "intent": "Verify the side panel or dialog opened showing details of 'Automated Concept'",
+      "type": "visible",
+      "expected": "[role='dialog'], [data-state='open']",
+      "tolerance": null
+    },
+    {
+      "id": "assert-6",
+      "afterStep": "step-6",
+      "intent": "Verify the editable form for 'Automated Concept' is now visible with a Save changes button",
+      "type": "visible",
+      "expected": "Save changes",
+      "tolerance": null
+    },
+    {
+      "id": "assert-7",
+      "afterStep": "step-8",
+      "intent": "Verify 'Number' is now shown as the selected Data type after selection",
+      "type": "visible",
+      "expected": "Number",
+      "tolerance": null
+    },
+    {
+      "id": "assert-8",
+      "afterStep": "step-9",
+      "intent": "Verify a success notification 'Concept updated' appears after saving changes",
+      "type": "visible",
+      "expected": "Concept updated",
+      "tolerance": null
+    },
+    {
+      "id": "assert-9",
+      "afterStep": "step-10",
+      "intent": "Verify the delete confirmation modal is visible after clicking Delete",
+      "type": "visible",
+      "expected": "[role='dialog']",
+      "tolerance": null
+    },
+    {
+      "id": "assert-10",
+      "afterStep": "step-10",
+      "intent": "Verify the confirmation prompt text is visible in the delete modal",
+      "type": "visible",
+      "expected": "Type Automated Concept exactly to enable deletion",
+      "tolerance": null
+    },
+    {
+      "id": "assert-11",
+      "afterStep": "step-12",
+      "intent": "Verify the delete confirmation modal is closed after confirming deletion",
+      "type": "hidden",
+      "expected": "[role='dialog']",
+      "tolerance": null
+    },
+    {
+      "id": "assert-12",
+      "afterStep": "step-12",
+      "intent": "Verify a success notification 'Concept deleted' appears after deletion",
+      "type": "visible",
+      "expected": "Concept deleted",
+      "tolerance": null
+    },
+    {
+      "id": "assert-13",
+      "afterStep": "step-12",
+      "intent": "Verify the concepts list is now empty showing 'No concepts available yet' message",
+      "type": "visible",
+      "expected": "No concepts available yet",
+      "tolerance": null
+    },
+    {
+      "id": "assert-14",
+      "afterStep": "step-12",
+      "intent": "Verify 'Automated Concept' no longer appears in the concepts list",
+      "type": "hidden",
+      "expected": "Automated Concept",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-07-01T21:51:30.796706+00:00",
+    "updatedAt": "2026-07-02T21:13:50.724560+00:00",
+    "lastRun": "2026-07-02T21:13:50.724272+00:00",
+    "runCount": 9,
+    "passCount": 2,
+    "passRate": 0.2222222222222222,
+    "avgDuration": 58978,
+    "source": null
+  }
+}

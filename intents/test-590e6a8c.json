@@ -1,0 +1,179 @@
+{
+  "id": "test-590e6a8c",
+  "name": "Bug on products",
+  "description": "Verifies that navigating to the Products section, selecting the 'Allied Health' product group, and clicking 'Create meta' for a product results in a visible error banner about a regex mismatch in the product meta template, with a Retry option displayed.",
+  "baseUrl": "https://dev-prism.upcover.com",
+  "createdFrom": "recorder",
+  "tags": [
+    "products",
+    "admin",
+    "error-handling",
+    "meta-template",
+    "allied-health",
+    "regression"
+  ],
+  "auth": null,
+  "steps": [
+    {
+      "id": "step-1",
+      "order": 1,
+      "intent": "Navigate to the Admin Dashboard",
+      "type": "navigate",
+      "target": null,
+      "value": null,
+      "url": "/admin",
+      "waitMs": null
+    },
+    {
+      "id": "step-2",
+      "order": 2,
+      "intent": "Click on the 'Products' card to navigate to the Products section",
+      "type": "click",
+      "target": {
+        "text": "Products",
+        "role": "link",
+        "testId": null,
+        "css": "a:has-text('Products')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-3",
+      "order": 3,
+      "intent": "Click on the 'Allied Health' product group card to view its products",
+      "type": "click",
+      "target": {
+        "text": "Allied Health",
+        "role": "heading",
+        "testId": null,
+        "css": "h3:has-text('Allied Health')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-4",
+      "order": 4,
+      "intent": "Click the 'Create meta' button for 'allied health product insurance'",
+      "type": "click",
+      "target": {
+        "text": "Create meta",
+        "role": "button",
+        "testId": null,
+        "css": "tr:has-text('allied health product insurance') button:has-text('Create meta'), button[data-slot='button'][data-permission-state='allowed']:has-text('Create meta')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    },
+    {
+      "id": "step-5",
+      "order": 5,
+      "intent": "Click the 'Retry' button to attempt reloading the product meta data",
+      "type": "click",
+      "target": {
+        "text": "Retry",
+        "role": "button",
+        "testId": null,
+        "css": "button:has-text('Retry')",
+        "xpath": null,
+        "label": null,
+        "placeholder": null,
+        "position": null,
+        "parentContext": null
+      },
+      "value": null,
+      "url": null,
+      "waitMs": null
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assert-1",
+      "afterStep": "step-2",
+      "intent": "Verify navigation to the Products page",
+      "type": "url",
+      "expected": "/admin/products",
+      "tolerance": null
+    },
+    {
+      "id": "assert-2",
+      "afterStep": "step-3",
+      "intent": "Verify navigation to the Allied Health product group page",
+      "type": "url",
+      "expected": "/admin/products",
+      "tolerance": null
+    },
+    {
+      "id": "assert-3",
+      "afterStep": "step-3",
+      "intent": "Verify the Allied Health products list is displayed",
+      "type": "visible",
+      "expected": "button:has-text('Create meta')",
+      "tolerance": null
+    },
+    {
+      "id": "assert-4",
+      "afterStep": "step-4",
+      "intent": "Verify the error banner appears after clicking Create meta",
+      "type": "visible",
+      "expected": "Failed to load product meta template",
+      "tolerance": null
+    },
+    {
+      "id": "assert-5",
+      "afterStep": "step-4",
+      "intent": "Verify the 'Product meta builder data is not available' message is shown",
+      "type": "visible",
+      "expected": "Product meta builder data is not available",
+      "tolerance": null
+    },
+    {
+      "id": "assert-6",
+      "afterStep": "step-4",
+      "intent": "Verify the Retry button is visible after the error",
+      "type": "visible",
+      "expected": "button:has-text('Retry')",
+      "tolerance": null
+    }
+  ],
+  "config": {
+    "timeout": 30000,
+    "retries": 1,
+    "browsers": [
+      "chromium"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "metadata": {
+    "createdAt": "2026-07-28T07:46:52.598805+00:00",
+    "updatedAt": "2026-07-28T07:46:52.598805+00:00",
+    "lastRun": null,
+    "runCount": 0,
+    "passCount": 0,
+    "passRate": 0,
+    "avgDuration": 0,
+    "source": null
+  }
+}

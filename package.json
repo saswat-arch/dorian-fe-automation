@@ -1,0 +1,29 @@
+{
+  "name": "qa-autopilot",
+  "version": "0.1.0",
+  "description": "AI-powered frontend QA automation engine with self-healing selectors",
+  "private": true,
+  "scripts": {
+    "start": "pnpm run setup && pnpm run dev",
+    "setup": "pnpm run setup:engine && pnpm run setup:web",
+    "setup:engine": "test -d engine/.venv || python3 -m venv engine/.venv && engine/.venv/bin/pip install --upgrade pip && engine/.venv/bin/pip install -e engine",
+    "setup:web": "cd web && pnpm install",
+    "dev": "concurrently --names engine,web --prefix-colors blue,green --kill-others-on-fail \"pnpm run dev:engine\" \"pnpm run dev:web\"",
+    "dev:engine": "engine/.venv/bin/uvicorn engine.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir engine/engine --loop asyncio --app-dir engine",
+    "dev:web": "cd web && pnpm dev",
+    "auth:setup": "cd engine && .venv/bin/python -m engine.core.auth_setup --env staging"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "testing",
+    "playwright",
+    "ai",
+    "self-healing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
